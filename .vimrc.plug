@@ -1,0 +1,57 @@
+call plug#begin('~/.vim/plugged')
+
+"Fugitive Vim Github Wrapper
+Plug 'tpope/vim-fugitive'
+
+"Snippets for fast html css workflow
+Plug 'mattn/emmet-vim'
+
+"Asynchronous Lint Engine
+Plug 'dense-analysis/ale'
+
+"Auto-completion with ALE
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
+" Python LSP needs Jedi
+Plug 'davidhalter/jedi-vim'
+
+" Deoplete source for jedi
+Plug 'deoplete-plugins/deoplete-jedi'
+
+" Python Indent needs a fix
+Plug 'Vimjas/vim-python-pep8-indent'
+
+" Supertab : Helps in completion
+Plug 'ervandew/supertab'
+
+
+" Snippet engine.
+Plug 'SirVer/ultisnips'
+
+" Community Snippets
+Plug 'honza/vim-snippets'
+
+" Display Indent Levels Visually
+" Plug 'thaerkh/vim-indentguides'
+Plug 'nathanaelkane/vim-indent-guides'
+
+"Color Scheme
+Plug 'ajh17/spacegray.vim'
+
+"Preview color in css
+Plug 'ap/vim-css-color'
+
+"Syntax highlighting in js and jsx
+Plug 'yuezk/vim-js'
+Plug 'maxmellon/vim-jsx-pretty'
+
+"Modify Statusline
+Plug 'vim-airline/vim-airline'
+
+call plug#end()
